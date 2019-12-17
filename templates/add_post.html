@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Make A Post!</h1>
+    <form method='post'>
+        <label>
+            Title:<br>
+            <input type="text" name="title"/>
+            <span class=".error">{{missing_title}}</span>
+        </label>
+        <br>
+        <label>
+            Body:<br>
+            <textarea name="body"></textarea>
+            <span class=".error">{{missing_body}}</span>
+        </label>
+        <br>
+        <input type="submit" value='Post' />
+    </form>
+
+    <hr />
+{% endblock %}
